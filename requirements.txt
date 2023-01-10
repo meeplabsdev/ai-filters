@@ -1,1 +1,12 @@
 opencv-python
+matplotlib
+numpy
+contourpy
+cycler
+fonttools
+kiwisolver
+packaging
+pillow
+pyparsing
+python-dateutil
+six
