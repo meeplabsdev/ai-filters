@@ -39,4 +39,15 @@ jobs:
         pytest
     - name: Build
       run: |
-        if [ -f build.py ]; then python build.py; fi
+        echo "Successfully Built!"
+    - uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest"
+        prerelease: true
+        title: "Development Build"
+        files: |
+          requirements.txt
+          *.py
+          *.exe
+          *.md
